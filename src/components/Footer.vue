@@ -1,6 +1,9 @@
 <template>
   <footer>
     <div class="footer-top">
+      <div class="sfondo">
+        <img src="../assets/img/dc-logo-bg.png" alt="">
+      </div>
       <div class="container-footer-top flex">
         <div class="col-left">
           <ul>
@@ -187,14 +190,22 @@ export default {
 
 <style lang="scss" scoped>
   footer {
-    height: 500px;  
+    height: 450px;  
     .footer-top{
+      position: relative;
       background-image: url('../assets/img/footer-bg.jpg');
       height: 100%;
       width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
       padding: 60px 0;
+
+      .sfondo {
+        position: absolute;
+        right: 300px;
+        transform: translate(0%, -20%);
+      }
+
       .container-footer-top {
         width: 70%;
         margin: 0 auto;
@@ -224,11 +235,12 @@ export default {
     .footer-bottom {
       background-color: #282828;
       padding: 30px 0;
+      z-index: 999;
       .container-footer-bottom {
         width: 70%;
         margin: 0 auto;
-        
         justify-content: space-between;
+        align-items: center;
         text-transform: uppercase;
         button {
           text-transform: uppercase;
