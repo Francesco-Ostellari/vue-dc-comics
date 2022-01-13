@@ -65,7 +65,7 @@ export default {
             .li-blue {
               color: #0282F9;
               border-bottom: 6px solid #0282F9;
-              padding-bottom: 40px;
+              padding-bottom: 35px;
             }
           }
         }
