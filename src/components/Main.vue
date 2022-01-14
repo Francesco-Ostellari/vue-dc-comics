@@ -7,7 +7,7 @@
         <div class="title">
           <h1>current series</h1>
         </div>
-        <div class="container-img flex">
+        <!-- <div class="container-img flex">
           <div class="container-card" v-for="(thumb, index) in thumbs" :key="index">
             <div class="thumb-img">
               <img :src="thumb.thumb" alt="">
@@ -16,6 +16,15 @@
               <span>{{thumb.series}}</span>
             </div>
           </div>
+        </div> -->
+        <div class="container-img flex">
+          <Product
+            v-for="(thumb, index) in thumbs"
+            :key="index"
+            :img="thumb.thumb"
+            :alt="thumb.series"
+            :titolo="thumb.series"
+          />
         </div>
       </div>
     </div>
@@ -49,8 +58,12 @@
 </template>
 
 <script>
+import Product from './Product.vue'
 export default {
   name: 'Main',
+  components: {
+    Product,
+  },
   data() {
     return {
       thumbs: [
@@ -133,6 +146,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/partials/_variables.scss";
   main {
     .jumbotron {
       background-image: url('../assets/img/jumbotron.jpg');
@@ -163,26 +177,7 @@ export default {
             padding: 50px 0;
             flex-wrap: wrap;
             gap: 20px;
-            .container-card {
-              .thumb-img {
-                width: 150px;
-                height: 150px;
-                overflow: hidden;
-                img {
-                  width: 100%;
-                }
-              }
-              .text {
-                margin: 10px 0 20px 0;
-                width: 130px;
-                color: white;
-                text-transform: uppercase;
-                span {
-                  width: 100%;
-                  display: inline-block;
-                }
-              }
-            }
+            
           }
         }
     }
