@@ -194,15 +194,17 @@ export default {
       width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
-      padding: 60px 0;
+      
       .container-footer-top {
         width: 70%;
         margin: 0 auto;
         background-image: url('../assets/img/dc-logo-bg.png');
         background-repeat: no-repeat;
-        background-position: right;
+        background-position-x: 85%;
+        background-position-y: 90%;
         .col-left, .col-center, .col-right {
           margin-right: 60px;
+          padding: 60px 0;
           ul {
             margin-bottom: 30px;
             list-style: none;
