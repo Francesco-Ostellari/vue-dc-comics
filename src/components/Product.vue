@@ -2,7 +2,7 @@
 <div>
   <div class="container-card">
     <div class="thumb-img">
-      <img :src="img" alt="titolo">
+      <img :src="img" :alt="titolo">
     </div>
     <div class="text">
       <span>{{titolo}}</span>
