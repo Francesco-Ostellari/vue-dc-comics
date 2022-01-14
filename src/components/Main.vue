@@ -7,16 +7,6 @@
         <div class="title">
           <h1>current series</h1>
         </div>
-        <!-- <div class="container-img flex">
-          <div class="container-card" v-for="(thumb, index) in thumbs" :key="index">
-            <div class="thumb-img">
-              <img :src="thumb.thumb" alt="">
-            </div>
-            <div class="text">
-              <span>{{thumb.series}}</span>
-            </div>
-          </div>
-        </div> -->
         <div class="container-img flex">
           <Product
             v-for="(thumb, index) in thumbs"
@@ -25,6 +15,11 @@
             :alt="thumb.series"
             :titolo="thumb.series"
           />
+        </div>
+        <div class="container-button flex">
+          <div class="button">
+            load more
+          </div>
         </div>
       </div>
     </div>
@@ -177,7 +172,19 @@ export default {
             padding: 50px 0;
             flex-wrap: wrap;
             gap: 20px;
-            
+          }
+          .container-button {
+            justify-content: center;
+            margin-bottom: 10px;
+            .button {
+              background-color: #0282F9;
+              width: 200px;
+              padding: 10px 0;
+              text-align: center;
+              color: white;
+              text-transform: uppercase;
+              font-weight: bold;
+            }
           }
         }
     }
